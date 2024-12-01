@@ -4,19 +4,19 @@
 
 export const Categoryinfos = [
     {
-        title: "Jewelry",
-        name: "Jewelryy",
+        title: "jewelery",
+        name: "jewelery",
         imgLink: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
     },
     {
-        title: "Women's Clothing",
-        name: "womens-clothing",
+        title: "women's clothing",
+        name: "women's clothing",
         imgLink: 'https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg',
     },
     {
-        title: "Electronics",
-        name: "Electronics",
-        imgLink: 'https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg',
+        title: "electronics",
+        name: "electronics",
+        imgLink: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
     },
     {
         title: "men's clothing",

@@ -1,22 +1,27 @@
-// import { StrictMode } from 'react'
-// import { createRoot } from 'react-dom/client'
-// import './index.css'
-// import App from './App.jsx'
-
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>,
-// )
 
 
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+
+import React from 'react';
+import { createRoot } from 'react-dom/client'; 
 import './index.css';
 import App from './App.jsx';
 
-createRoot(document.getElementById('root')).render(
+import { StrictMode } from 'react';  
+import { DataProvider } from './components/DataProvider/DataProvider.jsx';
+import { initialState, reducer } from './Utility/reducer.jsx';
+
+
+const root = createRoot(document.getElementById('root')); 
+
+root.render(
+
   <StrictMode>
-    <App />
+  <DataProvider reducer={reducer} initialState={initialState}>
+
+
+<App />
+
+  </DataProvider>
+ 
   </StrictMode>
 );

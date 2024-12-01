@@ -1,29 +1,40 @@
 
-
-import React from 'react';
+import React, { useContext } from 'react';
 import { CiSearch } from "react-icons/ci";
 import { BiCart } from "react-icons/bi";
 import classes from "./Header.module.css";
 import { Link } from 'react-router-dom';
 import LowerHeader from '../LowerHeader';
 import { SlLocationPin } from "react-icons/sl";
+import { DataContext } from '../DataProvider/DataProvider';
 
-function Header() {
+
+const Header =() =>{
+const [{basket},dispatch] =useContext(DataContext)
+
+const totalItem =basket?.reduce((amount,item)=>{
+  return item.amount + amount
+},0)
   return (
-    <>
+ 
+    
+    <section className={classes.fixed}> 
+    <section>
       <section className={classes.header_container}>
         {/* Logo and Delivery Section */}
         <div className={classes.logo_container}>
           <Link to="/">
             <img
-              src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+              src=" https://pngimg.com/uploads/amazon/amazon_PNG11.png"
               alt="Amazon Logo"
+              //
             />
           </Link>
+          <span>
+          <SlLocationPin />
+          </span>
           <div className={classes.delivery}>
-            <span>
-            <SlLocationPin />
-            </span>
+           
             <p>Delivered to</p>
             <span>Ethiopia</span>
           </div>
@@ -66,12 +77,14 @@ function Header() {
           {/* Cart */}
           <Link to="/cart" className={classes.cart}>
             <BiCart size={35} />
-            <span >0</span>
+            <span >{totalItem}</span>
           </Link>
         </div>
       </section>
       <LowerHeader/>
-    </>
+    </section>
+    </section>
+   
   );
 }
 
