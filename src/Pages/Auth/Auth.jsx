@@ -7,6 +7,7 @@ import { ClipLoader } from "react-spinners";
 import { DataContext } from "../../components/DataProvider/DataProvider";
 import { Type } from "../../Utility/action.type";
 
+
 function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
