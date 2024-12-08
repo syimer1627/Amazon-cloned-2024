@@ -6,8 +6,9 @@ function LowerHeader() {
 
     <div className ={classes.lower_container}>
         <ul>
-         <li><IoMenuSharp /></li> 
-           <li><p>All</p></li>
+       
+        
+           <li><p> <IoMenuSharp />All</p></li>
            <li>Today's Deal</li>
            <li>Customer Service</li>
            <li>Registry</li>

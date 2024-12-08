@@ -28,13 +28,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  max-width: 250px;
+  max-width: 240px;
 }
 
 .logo_container img {
-  width: 150px;
+  width: 120px;
   vertical-align: middle;
   cursor: pointer;
+  padding-top: 25px;
 }
 
 /* Delivery Section */
@@ -156,7 +157,7 @@ border: 1px solid white;
 
 }
 .lower_container{
-  background-color: black;
+  background-color: rgb(26, 52, 90);
   color: white;
   
 }

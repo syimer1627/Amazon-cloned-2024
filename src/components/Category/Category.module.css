@@ -9,6 +9,7 @@
     object-fit: contain;
     max-height: 250px;
     padding: 0px 10px;
+   
 }
 .category a{
     text-decoration: none;
@@ -24,10 +25,15 @@
     font-weight: bold;
     color: rgb(9,132,209);
 }
-.category_container{
+.category_container {
     position: relative;
     margin-top: -10px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
+    max-width: 1600px;
     place-items: center;
+    margin-right: auto;
+    margin-left: auto;
 }
+

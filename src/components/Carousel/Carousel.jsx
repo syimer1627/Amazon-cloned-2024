@@ -8,15 +8,16 @@ import classes from "../Header/Header.module.css"
 function CarouselEffect() {
   return (
     <div>
-       <Carousel 
-        autoplay={true}
-        infiniteLoop={true}
-        showIndicators={true}
-        showThumbs={false}
-        >
+       <Carousel
+  autoPlay={true}
+  infiniteLoop={true}
+  showIndicators={true}
+  showThumbs={false}
+>
+
        {
         img.map((imageItemLink) =>{
-            return <img src ={imageItemLink}/>
+            return <img key={imageItemLink}src ={imageItemLink}/>
         })
        }
        </Carousel>
